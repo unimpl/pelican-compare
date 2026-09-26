@@ -15,6 +15,7 @@ for (const effort of efforts) {
   for (const item of window.PELICANS.filter(x => x.effort === effort)) {
     const card = document.createElement('article');
     card.className = 'work';
+    card.dataset.agent = item.agent;
     const label = `${item.agent} · ${item.modelLabel}`;
     const strength = effort + (item.effortDefault ? '（默认）' : '');
     const time = new Date(item.generatedAt).toLocaleTimeString('zh-CN', {timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit',hour12:false});
@@ -27,12 +28,34 @@ const resize = new ResizeObserver(entries => {
   for (const entry of entries) entry.target.firstElementChild.style.transform = `scale(${entry.contentRect.width / 1200})`;
 });
 document.querySelectorAll('.viewport').forEach(el => resize.observe(el));
-for (const button of document.querySelectorAll('.tabs button')) {
-  button.addEventListener('click', () => {
-    const selected = button.dataset.effort;
-    document.querySelectorAll('.tabs button').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
-    document.querySelectorAll('.comparison-row').forEach(row => {row.hidden = selected !== 'all' && row.dataset.effort !== selected;});
-    const count = window.PELICANS.filter(x => selected === 'all' || x.effort === selected).length;
-    document.getElementById('count').textContent = `${count} 份作品`;
+let selectedEffort = 'all';
+let selectedAgent = 'all';
+function applyFilters() {
+  let count = 0;
+  document.querySelectorAll('.comparison-row').forEach(row => {
+    let rowCount = 0;
+    row.querySelectorAll('.work').forEach(card => {
+      const matches = (selectedEffort === 'all' || row.dataset.effort === selectedEffort)
+        && (selectedAgent === 'all' || card.dataset.agent === selectedAgent);
+      card.hidden = !matches;
+      if (matches) rowCount++;
+    });
+    row.hidden = rowCount === 0;
+    count += rowCount;
   });
+  document.querySelectorAll('button[data-effort]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.effort === selectedEffort)));
+  document.querySelectorAll('button[data-agent]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.agent === selectedAgent)));
+  document.getElementById('count').textContent = `${count} / ${window.PELICANS.length} 份作品`;
+  document.getElementById('empty-results').hidden = count !== 0;
 }
+for (const button of document.querySelectorAll('button[data-effort]')) {
+  button.addEventListener('click', () => { selectedEffort = button.dataset.effort; applyFilters(); });
+}
+for (const button of document.querySelectorAll('button[data-agent]')) {
+  button.addEventListener('click', () => { selectedAgent = button.dataset.agent; applyFilters(); });
+}
+document.getElementById('reset-filters').addEventListener('click', () => {
+  selectedAgent = 'all'; selectedEffort = 'all'; applyFilters();
+  document.querySelector('button[data-agent="all"]').focus();
+});
+applyFilters();

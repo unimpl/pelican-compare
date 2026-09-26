@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="10 份鹈鹕骑自行车作品，对比 Codex、Iota、pi 搭配不同模型和推理强度生成的 HTML 与 SVG。">
 <meta name="theme-color" content="#f4f5f7"><title>鹈鹕对照室 · Pelican Compare</title>
-<link rel="stylesheet" href="style.css"><script src="data.js" defer></script><script src="app.js" defer></script>
+<link rel="stylesheet" href="style.css?v=f046ac5cfe51"><script src="data.js?v=df34be6357a7" defer></script><script src="app.js?v=2da79a5eb5ce" defer></script>
 </head>
 <body>
 <header class="masthead"><a class="wordmark" href="./">鹈鹕对照室<span>Pelican Compare</span></a><a href="https://github.com/unimpl/pelican-compare" target="_blank" rel="noopener">GitHub 仓库 ↗</a></header>
@@ -12,8 +12,10 @@
 <section class="intro"><div><h1>同一主题，<br class="mobile-break">十种骑法。</h1><p>Codex、Iota、pi × 四种模型，原始生成结果并排看。</p></div><div class="edition"><time datetime="2026-09-26">2026 / 09 / 26</time><span>10 份作品 · HTML + SVG</span></div></section>
 <div class="prompt"><span>共同主题</span><p>鹈鹕骑自行车 · 各次原始提示词见作品下方</p></div>
 <div class="toolbar"><div class="tabs" role="group" aria-label="推理强度"><button aria-pressed="true" data-effort="all">全部强度</button><button aria-pressed="false" data-effort="xhigh">xhigh</button><button aria-pressed="false" data-effort="high">high</button><button aria-pressed="false" data-effort="medium">medium</button><button aria-pressed="false" data-effort="low">low</button></div><p id="count" aria-live="polite">10 份作品</p></div>
+<div class="agent-toolbar"><span class="filter-label">Agent</span><div class="tabs" role="group" aria-label="Agent 筛选"><button aria-pressed="true" data-agent="all">全部 agent <span>10</span></button><button aria-pressed="false" data-agent="Codex">Codex <span>7</span></button><button aria-pressed="false" data-agent="Iota">Iota <span>1</span></button><button aria-pressed="false" data-agent="pi">pi <span>2</span></button></div></div>
 <p class="comparison-guide">按推理强度分组 · 每份作品标注 agent 与模型</p>
 <div id="gallery"></div>
+<div id="empty-results" class="empty-results" hidden><p>当前 agent 与强度组合没有作品。</p><button id="reset-filters">重置筛选，查看全部作品</button></div>
 <noscript><p>开启 JavaScript 以查看并排比较，或直接打开原始作品：</p><ul><li><a href="artifacts/gpt-6-sol-medium.html">GPT-6 Sol · medium</a></li><li><a href="artifacts/gpt-6-sol-high.html">GPT-6 Sol · high</a></li><li><a href="artifacts/gpt-6-sol-xhigh.html">GPT-6 Sol · xhigh</a></li><li><a href="artifacts/gpt-6-astra-low.html">GPT-6 Astra · low</a></li><li><a href="artifacts/gpt-6-astra-medium.html">GPT-6 Astra · medium</a></li><li><a href="artifacts/gpt-6-astra-high.html">GPT-6 Astra · high</a></li><li><a href="artifacts/gpt-6-astra-xhigh.html">GPT-6 Astra · xhigh</a></li><li><a href="artifacts/iota-glm-5.3-medium.svg">Iota · GLM-5.3 · medium</a></li><li><a href="artifacts/pi-deepseek-v4-flash-0731-high.html">pi · DeepSeek-V4-Flash-0731 · high</a></li><li><a href="artifacts/pi-glm-5.3-high.html">pi · GLM-5.3 · high</a></li></ul></noscript>
 <aside class="notes"><h2>关于这次对比</h2><div><p>作品来自 2026 年 9 月 26 日的十次独立对话，涵盖 Codex、个人开发的 Iota agent 和 pi。模型与强度取自生成记录；Iota 的默认 medium 由作品提供者确认，session 未单独记录该字段。</p><p>所有预览使用相同的 1200 × 850 画布等比缩放。原始文件未经修改，Iota SVG 仅补充 HTML 展示容器。不同 agent、模型的强度标识并非统一计算预算，提示词也略有差异；单次生成仅供观察，不构成严格评测。</p></div></aside>
 </main><footer><span>unimpl / pelican-compare</span><a href="data.json">查看作品数据 ↗</a></footer>
