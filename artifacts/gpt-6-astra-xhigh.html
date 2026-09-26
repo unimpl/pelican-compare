@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#faf6e9">
+<title>鹈鹕的海边骑行</title>
+<style>
+:root { color-scheme: light; --foreground:#244c43; --background:#faf6e9; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100svh; display:grid; place-items:center; padding:24px; background:#faf6e9; font:14px/1.5 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; }
+main { width:min(100%,1000px); }
+.btn { appearance:none; min-height:44px; padding:10px 21px; border:1px solid #244c4330; border-radius:30px; color:#244c43; background:transparent; font:inherit; cursor:pointer; transition:background .2s,border-color .2s; }
+.btn:hover { background:#244c4309; border-color:#244c4360; }
+.btn:focus-visible { outline:2px solid #244c43; outline-offset:4px; }
+@media(max-width:600px) { body { padding:8px; } }
+</style>
+</head>
+<body><main>
+<div id="pelican-ride">
+  <style>
+    #pelican-ride {
+      --p-ink: color-mix(in srgb, #244c43 88%, var(--foreground, #244c43));
+      --p-paper: color-mix(in srgb, #faf6e9 94%, var(--background, #faf6e9));
+      --p-white: color-mix(in srgb, #fffdf4 97%, var(--background, #fffdf4));
+      --p-shade: color-mix(in srgb, #dce6d9 95%, var(--background, #dce6d9));
+      --p-green: color-mix(in srgb, #68a78c 95%, var(--green, #68a78c));
+      --p-mint: color-mix(in srgb, #b3d0bd 94%, var(--green, #b3d0bd));
+      --p-yellow: color-mix(in srgb, #efbc56 96%, var(--yellow, #efbc56));
+      --p-orange: color-mix(in srgb, #dc8b42 96%, var(--orange, #dc8b42));
+      --p-coral: color-mix(in srgb, #cf7057 96%, var(--orange, #cf7057));
+      --p-pouch: color-mix(in srgb, #efd3a0 96%, var(--yellow, #efd3a0));
+      --p-brown: color-mix(in srgb, #8d6449 96%, var(--foreground, #8d6449));
+      position: relative; width: 100%; color: var(--foreground, #244c43);
+    }
+    #pelican-ride .pelican-stage { display: block; width: 100%; height: auto; overflow: hidden; }
+    #pelican-ride .outline { stroke: var(--p-ink); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+    #pelican-ride .fine { fill: none; stroke: var(--p-ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    #pelican-ride .controls { display: flex; justify-content: center; padding: 14px 0 6px; }
+    @media (max-width: 520px) { #pelican-ride .pelican-stage { aspect-ratio: 1; } }
+  </style>
+  <svg class="pelican-stage" viewBox="0 0 1000 625" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="pelican-title pelican-desc" xmlns="http://www.w3.org/2000/svg">
+    <title id="pelican-title">鹈鹕的海边骑行</title>
+    <desc id="pelican-desc">一只系着橘红色围巾的白鹈鹕，骑着薄荷绿自行车沿着海岸前进。长长的金色鸟喙下有宽大的喉囊，两只蹼足交替踩动踏板，轮辐旋转，围巾随风飘动。</desc>
+    <defs>
+      <clipPath id="pelican-scene-clip"><rect width="1000" height="625" rx="6"/></clipPath>
+      <g id="pelican-wheel">
+        <circle r="91" fill="var(--p-paper)" stroke="var(--p-ink)" stroke-width="11"/>
+        <circle r="84" fill="none" stroke="var(--p-pouch)" stroke-width="5"/>
+        <circle r="79" fill="none" stroke="var(--p-ink)" stroke-width="1.5" opacity=".5"/>
+        <g stroke="var(--p-ink)" stroke-width="1.25" opacity=".45">
+          <path d="M-78 0H78M0-78V78M-55.15-55.15 55.15 55.15M-55.15 55.15 55.15-55.15M-72.06-29.85 72.06 29.85M-29.85-72.06 29.85 72.06M-72.06 29.85 72.06-29.85M-29.85 72.06 29.85-72.06"/>
+        </g>
+        <circle r="8" fill="var(--p-pouch)" stroke="var(--p-ink)" stroke-width="3"/>
+        <path d="M0-85v5" stroke="var(--p-coral)" stroke-width="4" stroke-linecap="round"/>
+      </g>
+      <g id="pelican-cloud" fill="var(--p-white)">
+        <path d="M0 24C-1 13 10 5 23 9 27-7 51-8 59 7 73 1 90 8 91 21 106 20 116 25 114 30H0Z"/>
+      </g>
+      <g id="pelican-grass" fill="none" stroke="var(--p-green)" stroke-width="2.5" stroke-linecap="round">
+        <path d="M0 0q-1-13-10-19M0 0q1-22 8-27M1 0q9-15 16-17"/>
+      </g>
+    </defs>
+    <g clip-path="url(#pelican-scene-clip)">
+      <rect width="1000" height="625" fill="var(--p-paper)"/>
+      <!-- A quiet, layered coast. The scenery moves independently of the rider. -->
+      <circle cx="785" cy="132" r="57" fill="var(--p-yellow)" opacity=".48"/>
+      <circle cx="785" cy="132" r="72" fill="none" stroke="var(--p-yellow)" stroke-width="1" opacity=".22"/>
+      <g fill="none" stroke="var(--p-ink)" stroke-width="2.3" stroke-linecap="round" opacity=".55">
+        <path d="M707 83q8-8 15 1 9-7 16 0M862 196q7-7 14 0 7-8 14-2"/>
+      </g>
+      <g id="pelican-clouds" opacity=".85">
+        <g id="pelican-cloud-strip">
+          <use href="#pelican-cloud" x="110" y="123"/>
+          <use href="#pelican-cloud" transform="translate(860 251) scale(.8)"/>
+          <use href="#pelican-cloud" transform="translate(315 81) scale(.55)"/>
+        </g>
+        <use href="#pelican-cloud-strip" transform="translate(1050 0)"/>
+      </g>
+      <path d="M0 398Q124 362 244 387T487 384T740 388T1000 369V497H0Z" fill="var(--p-mint)" opacity=".26"/>
+      <path d="M0 424Q230 404 415 427T1000 413V505H0Z" fill="var(--p-mint)" opacity=".31"/>
+      <g stroke="var(--p-green)" stroke-linecap="round" fill="none" opacity=".32">
+        <path d="M44 430h98m34 0h21m556 12h83m22 0h45M46 451h38m735 18h96m-698-7h52"/>
+      </g>
+      <path d="M0 493Q153 465 289 487T588 490T1000 469V625H0Z" fill="var(--p-pouch)" opacity=".32"/>
+      <path d="M0 545H1000" stroke="var(--p-ink)" stroke-width="2.2" opacity=".4"/>
+      <g id="pelican-ground" class="fine" opacity=".32">
+        <path id="pelican-ground-strip" d="M10 568h55m117 19h30m114-26h66m105 30h45m132-24h73m138 19h24m75-23h77M40 603h24m114-3h11m99 9h22m220-8h34m225 7h22m130-5h24"/>
+        <use href="#pelican-ground-strip" transform="translate(-1100 0)"/>
+        <use href="#pelican-ground-strip" transform="translate(1100 0)"/>
+      </g>
+      <g id="pelican-plants">
+        <g id="pelican-plant-strip">
+          <use href="#pelican-grass" transform="translate(99 543) scale(.9)"/>
+          <use href="#pelican-grass" transform="translate(908 543) scale(1.1)"/>
+          <g transform="translate(810 514)" stroke="var(--p-green)" stroke-width="2" fill="none"><path d="M0 28V3m0 14 9-7m-9 12-7-6"/><circle cy="2" r="5" fill="var(--p-white)" stroke="var(--p-yellow)" stroke-width="3"/></g>
+        </g>
+        <use href="#pelican-plant-strip" transform="translate(1100 0)"/>
+      </g>
+      <ellipse id="pelican-shadow" cx="502" cy="545" rx="243" ry="8" fill="var(--p-ink)" opacity=".09"/>
+      <g id="pelican-rig">
+        <!-- Far pedal and leg sit behind the frame. -->
+        <path id="pelican-far-leg" d="M427 325 406 402 455 433" fill="none" stroke="var(--p-ink)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="pelican-far-leg-color" d="M427 325 406 402 455 433" fill="none" stroke="var(--p-orange)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+        <g id="pelican-far-foot" transform="translate(449 433)">
+          <path d="M-10-10 7-10 23-1Q27 5 18 5H-12Q-18 4-16-2Z" fill="var(--p-orange)" class="outline"/>
+          <path d="M-14 8H22" stroke="var(--p-ink)" stroke-width="6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(344 448)"><g id="pelican-rear-wheel"><use href="#pelican-wheel"/></g></g>
+        <g transform="translate(663 448)"><g id="pelican-front-wheel"><use href="#pelican-wheel"/></g></g>
+        <!-- Curved fenders and a small rear carrier. -->
+        <path d="M249 429A98 98 0 0 1 432 402M576 403A98 98 0 0 1 753 410" fill="none" stroke="var(--p-ink)" stroke-width="7" stroke-linecap="round"/>
+        <path d="M249 429A98 98 0 0 1 432 402M576 403A98 98 0 0 1 753 410" fill="none" stroke="var(--p-mint)" stroke-width="3" stroke-linecap="round"/>
+        <g class="fine"><path d="m270 380 74 68m75-77-75 77M292 355h87m-79 0-7 10h-20"/></g>
+        <rect x="264" y="359" width="11" height="8" rx="3" fill="var(--p-coral)" class="outline"/>
+        <!-- Double-stroked tubes keep the bicycle's silhouette crisp. -->
+        <path d="M344 448 416 355 478 433 344 448M416 355Q510 386 601 351L478 433M601 351 663 448" fill="none" stroke="var(--p-ink)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M344 448 416 355 478 433 344 448M416 355Q510 386 601 351L478 433M601 351 663 448" fill="none" stroke="var(--p-green)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="m416 355-11-29m197 25-13-43q-5-13 8-13h19" fill="none" stroke="var(--p-ink)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="m416 355-11-29m197 25-13-43q-5-13 8-13h19" fill="none" stroke="var(--p-pouch)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M379 322Q403 318 419 322L438 325Q442 332 428 336L386 333Q376 331 379 322Z" fill="var(--p-brown)" class="outline"/>
+        <path d="M594 297Q628 308 631 355" class="fine"/>
+        <path d="M604 295h18" stroke="var(--p-ink)" stroke-width="12" stroke-linecap="round"/>
+        <path d="M604 294h18" stroke="var(--p-brown)" stroke-width="7" stroke-linecap="round"/>
+        <path d="M346 438 470 410Q507 407 508 433 507 456 479 458L346 455Q328 453 330 446 331 439 346 438Z" fill="var(--p-mint)" stroke="var(--p-ink)" stroke-width="3"/>
+        <path d="m350 445 120-19" fill="none" stroke="var(--p-white)" stroke-width="2" opacity=".6"/>
+        <circle cx="478" cy="433" r="22" fill="var(--p-green)" stroke="var(--p-ink)" stroke-width="3"/>
+        <g id="pelican-crank" transform="rotate(0 478 433)">
+          <path d="M450 433h56" stroke="var(--p-ink)" stroke-width="8" stroke-linecap="round"/>
+          <path d="M450 432h56" stroke="var(--p-pouch)" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <circle cx="478" cy="433" r="5" fill="var(--p-ink)"/>
+        <!-- The near foot is solved against the pedal position every frame. -->
+        <path id="pelican-near-leg" d="M418 320 394 397 506 429" fill="none" stroke="var(--p-ink)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="pelican-near-leg-color" d="M418 320 394 397 506 429" fill="none" stroke="var(--p-orange)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <g id="pelican-near-foot" transform="translate(506 433)">
+          <path d="M-11-12 4-11Q8-6 17-5L26 0Q29 5 21 6H-13Q-19 6-17-1Z" fill="var(--p-yellow)" class="outline"/>
+          <path d="m7-4 8 7m0-6 7 6" class="fine" opacity=".5"/>
+          <path d="M-17 10H25" stroke="var(--p-ink)" stroke-width="7" stroke-linecap="round"/>
+          <path d="M-12 9H20" stroke="var(--p-brown)" stroke-width="2" stroke-linecap="round"/>
+        </g>
+        <!-- A long neck, oversized beak and hanging throat pouch make a pelican. -->
+        <g id="pelican-bird">
+          <g id="pelican-scarf-tail" transform="rotate(0 513 236)">
+            <path d="M518 233Q474 215 447 229T387 218L397 235 381 243Q423 257 453 244T517 250Z" fill="var(--p-coral)" class="outline"/>
+            <path d="M402 237Q431 246 454 235T493 236" fill="none" stroke="var(--p-pouch)" stroke-width="2" opacity=".6"/>
+          </g>
+          <path d="M319 287Q284 287 254 271L266 292 254 292Q280 320 333 321Z" fill="var(--p-shade)" class="outline"/>
+          <path d="M319 292 279 286m43 16-42-6" class="fine" opacity=".5"/>
+          <path d="M309 280C312 246 338 224 372 225 414 223 441 251 466 267 489 282 512 265 514 242 516 222 501 206 506 182 510 159 513 136 535 128L526 112Q540 114 546 126L550 111Q560 117 558 127C576 131 585 145 582 162 581 183 568 199 563 218 553 254 561 281 534 307 510 334 469 344 431 340 387 340 350 329 330 314 315 303 308 292 309 280Z" fill="var(--p-white)" class="outline"/>
+          <path d="M336 301Q375 327 427 327C475 328 521 311 535 280Q530 315 500 328C458 350 373 338 336 309Z" fill="var(--p-shade)"/>
+          <path d="M532 184Q523 214 534 237" fill="none" stroke="var(--p-shade)" stroke-width="10" stroke-linecap="round"/>
+          <!-- The pouch curves below the upper bill; the bill has a hooked tip. -->
+          <path d="M573 172 744 182C725 201 688 226 652 227 611 229 584 206 573 172Z" fill="var(--p-pouch)" class="outline"/>
+          <path d="M588 185Q612 218 650 218T728 189" fill="none" stroke="var(--p-orange)" stroke-width="2" opacity=".38"/>
+          <path d="M574 153C616 155 690 171 740 177Q756 179 747 190L739 190 738 184 574 177Q567 170 574 153Z" fill="var(--p-yellow)" class="outline"/>
+          <path d="M582 161 721 178" fill="none" stroke="var(--p-white)" stroke-width="3" stroke-linecap="round" opacity=".65"/>
+          <path d="m580 178 154 6" class="fine" opacity=".4"/>
+          <circle cx="558" cy="151" r="12" fill="var(--p-pouch)"/>
+          <g id="pelican-eye" transform="translate(560 151)">
+            <ellipse rx="5.2" ry="6.5" fill="var(--p-ink)"/>
+            <circle cx="1.6" cy="-2" r="1.7" fill="var(--p-white)"/>
+          </g>
+          <path d="M548 136q7-4 13 0" class="fine"/>
+          <ellipse cx="546" cy="173" rx="8" ry="4.5" fill="var(--p-coral)" opacity=".22"/>
+          <path d="M510 232Q531 244 557 239L553 253Q531 260 513 248Z" fill="var(--p-coral)" class="outline"/>
+          <path d="m546 245 7 1" stroke="var(--p-pouch)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M516 238q-14-7-19 0-4 8 15 11 10-2 4-11Z" fill="var(--p-coral)" class="outline"/>
+          <!-- A swept wing reaches forward to the handlebar. -->
+          <path d="M352 262C365 242 395 249 414 266 446 294 470 304 509 298L570 288Q581 286 594 294 601 300 591 303L581 302Q590 311 578 311L566 307C520 325 486 325 451 318 407 310 374 300 355 280" fill="var(--p-white)" class="outline"/>
+          <path d="M364 278Q406 304 449 306M376 272Q407 291 434 295M447 311Q487 325 539 307" class="fine" opacity=".36"/>
+          <path d="M357 280q3 10 13 13" class="fine"/>
+        </g>
+        <!-- A small bell sits just ahead of the wingtip. -->
+        <path d="M609 288h17q-2-11-9-11t-8 11Z" fill="var(--p-yellow)" class="outline"/>
+        <path d="M617 290v4" class="fine"/>
+      </g>
+      <g id="pelican-wind" fill="none" stroke="var(--p-green)" stroke-width="2.3" stroke-linecap="round" opacity=".5">
+        <path d="M217 242h46m-61 11h29M178 313h51m-26 12h16"/>
+      </g>
+    </g>
+  </svg>
+  <div class="controls"><button type="button" class="btn" id="pelican-toggle" aria-label="暂停骑行" aria-pressed="false">暂停骑行</button></div>
+  <script>
+    (() => {
+      const root = document.getElementById('pelican-ride');
+      const get = id => root.querySelector('#pelican-' + id);
+      const button = get('toggle');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const saved = window.openai?.widgetState?.privateContent;
+      let paused = typeof saved?.paused === 'boolean' ? saved.paused : reducedMotion.matches;
+      let elapsed = 0, last = null, frame = 0;
+      const parts = Object.fromEntries(['rig', 'bird', 'rear-wheel', 'front-wheel', 'crank', 'near-leg', 'near-leg-color', 'far-leg', 'far-leg-color', 'near-foot', 'far-foot', 'scarf-tail', 'eye', 'ground', 'plants', 'clouds', 'wind'].map(id => [id, get(id)]));
+      const set = (id, value) => parts[id].setAttribute('transform', value);
+
+      // Two-link inverse kinematics keep both webbed feet on the pedals.
+      function leg(side, angle, bob) {
+        const pedalX = 478 + Math.cos(angle) * 28;
+        const pedalY = 433 + Math.sin(angle) * 28;
+        const hipX = side === 'near' ? 420 : 431;
+        const hipY = 324 + bob;
+        const ankleX = pedalX - 4, ankleY = pedalY - 8;
+        const dx = ankleX - hipX, dy = ankleY - hipY;
+        const distance = Math.hypot(dx, dy), thigh = 80, shin = 82;
+        const along = (thigh * thigh - shin * shin + distance * distance) / (2 * distance);
+        const height = Math.sqrt(Math.max(0, thigh * thigh - along * along));
+        const kneeX = hipX + along * dx / distance - height * dy / distance;
+        const kneeY = hipY + along * dy / distance + height * dx / distance;
+        const path = `M${hipX} ${hipY}Q${hipX - 7} ${(hipY + kneeY) / 2} ${kneeX} ${kneeY}L${ankleX} ${ankleY}`;
+        parts[side + '-leg'].setAttribute('d', path);
+        parts[side + '-leg-color'].setAttribute('d', path);
+        set(side + '-foot', `translate(${pedalX} ${pedalY})`);
+      }
+
+      function draw(time) {
+        const angle = time * Math.PI * 2 / 2.15;
+        const bob = Math.sin(angle * 2) * 2;
+        const degrees = angle * 180 / Math.PI;
+        // Wheel speed follows a modest bicycle gear ratio.
+        set('rear-wheel', `rotate(${degrees * 1.7})`);
+        set('front-wheel', `rotate(${degrees * 1.7})`);
+        set('crank', `rotate(${degrees} 478 433)`);
+        set('bird', `translate(0 ${bob})`);
+        set('scarf-tail', `rotate(${Math.sin(angle * 1.3) * 3} 513 236)`);
+        const blink = time % 4.9;
+        const eyeScale = blink > 4.65 ? Math.max(.1, Math.abs(blink - 4.775) / .125) : 1;
+        set('eye', `translate(560 151) scale(1 ${eyeScale})`);
+        leg('near', angle, bob);
+        leg('far', angle + Math.PI, bob);
+        set('ground', `translate(${-time * 104 % 1100} 0)`);
+        set('plants', `translate(${-time * 104 % 1100} 0)`);
+        set('clouds', `translate(${-time * 6 % 1050} 0)`);
+        parts.wind.setAttribute('opacity', .28 + Math.sin(angle * .7) * .13);
+      }
+
+      function tick(now) {
+        frame = 0;
+        if (paused || document.hidden || !root.isConnected) { last = null; return; }
+        if (last !== null) elapsed += Math.min((now - last) / 1000, .05);
+        last = now;
+        draw(elapsed);
+        frame = requestAnimationFrame(tick);
+      }
+
+      function sync() {
+        button.textContent = paused ? '继续骑行' : '暂停骑行';
+        button.setAttribute('aria-label', button.textContent);
+        button.setAttribute('aria-pressed', String(paused));
+        if (frame) cancelAnimationFrame(frame);
+        frame = 0; last = null;
+        if (!paused && !document.hidden) frame = requestAnimationFrame(tick);
+      }
+      button.addEventListener('click', () => {
+        paused = !paused;
+        sync();
+        window.openai?.setWidgetState?.({ privateContent: { paused } })?.catch(() => {});
+      });
+      window.addEventListener('openai:set_globals', event => {
+        const state = event.detail?.globals?.widgetState?.privateContent;
+        if (typeof state?.paused === 'boolean') { paused = state.paused; sync(); }
+      });
+      reducedMotion.addEventListener('change', event => { paused = event.matches; sync(); });
+      document.addEventListener('visibilitychange', sync);
+      draw(0); sync();
+    })();
+  </script>
+</div>
+
+</main></body>
+</html>

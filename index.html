@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="同一句提示词，7 份鹈鹕骑自行车作品。对比 GPT-6 Sol 与 GPT-6 Astra 在不同推理强度下生成的 HTML + SVG。">
+<meta name="theme-color" content="#f4f5f7"><title>鹈鹕对照室 · Pelican Compare</title>
+<link rel="stylesheet" href="style.css"><script src="data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<header class="masthead"><a class="wordmark" href="./">鹈鹕对照室<span>Pelican Compare</span></a><a href="https://github.com/unimpl/pelican-compare" target="_blank" rel="noopener">GitHub 仓库 ↗</a></header>
+<main>
+<section class="intro"><div><h1>同一句话，<br class="mobile-break">七种骑法。</h1><p>两种模型 × 不同推理强度，原始生成结果并排看。</p></div><div class="edition"><time datetime="2026-09-26">2026 / 09 / 26</time><span>7 份作品 · HTML + SVG</span></div></section>
+<div class="prompt"><span>原始提示词</span><p>使用html + svg 实现 鹈鹕骑自行车</p></div>
+<div class="toolbar"><div class="tabs" role="group" aria-label="推理强度"><button aria-pressed="true" data-effort="all">全部强度</button><button aria-pressed="false" data-effort="xhigh">xhigh</button><button aria-pressed="false" data-effort="high">high</button><button aria-pressed="false" data-effort="medium">medium</button><button aria-pressed="false" data-effort="low">low</button></div><p id="count" aria-live="polite">7 份作品</p></div>
+<div class="column-heads" aria-hidden="true"><div><span class="model-symbol">S</span><strong>GPT-6 Sol</strong><span>3 份作品</span></div><div><span class="model-symbol astra">A</span><strong>GPT-6 Astra</strong><span>4 份作品</span></div></div>
+<div id="gallery"></div>
+<noscript><p>开启 JavaScript 以查看并排比较，或直接打开原始作品：</p><ul><li><a href="artifacts/gpt-6-sol-medium.html">GPT-6 Sol · medium</a></li><li><a href="artifacts/gpt-6-sol-high.html">GPT-6 Sol · high</a></li><li><a href="artifacts/gpt-6-sol-xhigh.html">GPT-6 Sol · xhigh</a></li><li><a href="artifacts/gpt-6-astra-low.html">GPT-6 Astra · low</a></li><li><a href="artifacts/gpt-6-astra-medium.html">GPT-6 Astra · medium</a></li><li><a href="artifacts/gpt-6-astra-high.html">GPT-6 Astra · high</a></li><li><a href="artifacts/gpt-6-astra-xhigh.html">GPT-6 Astra · xhigh</a></li></ul></noscript>
+<aside class="notes"><h2>关于这次对比</h2><div><p>作品来自 2026 年 9 月 26 日的七次独立对话。模型与推理强度取自各次生成记录，强度保留原始标识。</p><p>所有预览使用相同的 1200 × 850 画布等比缩放；原始文件未经修改，可打开原作体验完整交互。单次生成仅供观察，不代表模型的稳定能力或正式评测。</p></div></aside>
+</main><footer><span>unimpl / pelican-compare</span><a href="data.json">查看作品数据 ↗</a></footer>
+</body></html>
