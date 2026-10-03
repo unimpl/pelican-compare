@@ -111,5 +111,38 @@ window.PELICANS = [
     "prompt": "使用html + svg 实现 鹈鹕骑自行车",
     "sha256": "dbdd7e20c501889049a115fba0b56e342225b8b01c101b6bbb93d88c7112ab77",
     "effortSource": "generation-session"
+  },
+  {
+    "agent": "Codex",
+    "model": "gpt-6.1-sol",
+    "modelLabel": "GPT-6.1 Sol",
+    "effort": "medium",
+    "file": "artifacts/gpt-6.1-sol-medium-2026-10-03.html",
+    "generatedAt": "2026-10-03T07:36:47.722Z",
+    "prompt": "使用html + svg 实现 鹈鹕骑自行车\n",
+    "sha256": "0f5bf55b6b5be23e7e134c8ef20920b34c1b8fad5aec39489a5a118bad90ecc9",
+    "effortSource": "generation-session"
+  },
+  {
+    "agent": "Codex",
+    "model": "gpt-6.1-sol",
+    "modelLabel": "GPT-6.1 Sol",
+    "effort": "high",
+    "file": "artifacts/gpt-6.1-sol-high-2026-10-03.html",
+    "generatedAt": "2026-10-03T07:41:43.032Z",
+    "prompt": "使用html + svg 实现 鹈鹕骑自行车\n",
+    "sha256": "53021e86ee01edd15536e6799b319c169735c4de36841949d78f7c74eb4aa333",
+    "effortSource": "generation-session"
+  },
+  {
+    "agent": "Codex",
+    "model": "gpt-6.1-sol",
+    "modelLabel": "GPT-6.1 Sol",
+    "effort": "xhigh",
+    "file": "artifacts/gpt-6.1-sol-xhigh-2026-10-03.html",
+    "generatedAt": "2026-10-03T07:51:58.406Z",
+    "prompt": "使用html + svg 实现 鹈鹕骑自行车\n",
+    "sha256": "4b4b2a4e087602d24356720bbefdfa7a08e02c303c803bd05694e7172d4ef263",
+    "effortSource": "generation-session"
   }
 ];
