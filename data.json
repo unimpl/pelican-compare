@@ -144,5 +144,18 @@
     "prompt": "使用html + svg 实现 鹈鹕骑自行车\n",
     "sha256": "4b4b2a4e087602d24356720bbefdfa7a08e02c303c803bd05694e7172d4ef263",
     "effortSource": "generation-session"
+  },
+  {
+    "agent": "Iota",
+    "model": "GLM-5.3",
+    "modelLabel": "GLM-5.3",
+    "effort": "medium",
+    "effortDefault": true,
+    "file": "artifacts/iota-glm-5.3-medium-2026-10-12.html",
+    "generatedAt": "2026-10-12T22:05:14.809682+08:00",
+    "prompt": "使用html + svg 实现 鹈鹕骑自行车",
+    "sha256": "bf14ad0c0ac7240b5acee07af359744b369c6bbdeafe4a9d50cdebaac1051fb0",
+    "effortSource": "user-provided",
+    "note": "使用 2026-10-12 测试时的最新版 Iota agent；未记录具体版本号。默认 medium 由作品提供者确认，session 未单独记录推理强度。HTML + SVG 原作未经修改。"
   }
 ]
