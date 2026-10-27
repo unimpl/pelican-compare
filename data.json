@@ -157,5 +157,27 @@
     "sha256": "bf14ad0c0ac7240b5acee07af359744b369c6bbdeafe4a9d50cdebaac1051fb0",
     "effortSource": "user-provided",
     "note": "使用 2026-10-12 测试时的最新版 Iota agent；未记录具体版本号。默认 medium 由作品提供者确认，session 未单独记录推理强度。HTML + SVG 原作未经修改。"
+  },
+  {
+    "agent": "Codex",
+    "model": "gpt-6.1-terra",
+    "modelLabel": "GPT-6.1 Terra",
+    "effort": "high",
+    "file": "artifacts/gpt-6.1-terra-high-2026-10-27.html",
+    "generatedAt": "2026-10-27T13:38:45.487Z",
+    "prompt": "使用html + svg 实现 鹈鹕骑自行车\n",
+    "sha256": "88acebe47ed577352bdde0dc930fc9f874e43d70c65d74effd906021fa653379",
+    "effortSource": "generation-session"
+  },
+  {
+    "agent": "Codex",
+    "model": "gpt-6.1-terra",
+    "modelLabel": "GPT-6.1 Terra",
+    "effort": "xhigh",
+    "file": "artifacts/gpt-6.1-terra-xhigh-2026-10-27.html",
+    "generatedAt": "2026-10-27T13:40:44.616Z",
+    "prompt": "使用html + svg 实现 鹈鹕骑自行车\n",
+    "sha256": "921ba4d83b6346281327f261aff1b2a47ff3d3558bd22f18866556ece4697c0f",
+    "effortSource": "generation-session"
   }
 ]
