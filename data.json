@@ -179,5 +179,38 @@
     "prompt": "使用html + svg 实现 鹈鹕骑自行车\n",
     "sha256": "921ba4d83b6346281327f261aff1b2a47ff3d3558bd22f18866556ece4697c0f",
     "effortSource": "generation-session"
+  },
+  {
+    "agent": "Codex",
+    "model": "gpt-6.2-sol",
+    "modelLabel": "GPT-6.2 Sol",
+    "effort": "high",
+    "file": "artifacts/gpt-6.2-sol-high-2026-11-18.html",
+    "generatedAt": "2026-11-18T00:56:05.870Z",
+    "prompt": "使用html + svg 实现 鹈鹕骑自行车\n",
+    "sha256": "b68c1a33e3bd0aee05741f6286c0f4bac23625eed543fee0104b69f589730a09",
+    "effortSource": "generation-session"
+  },
+  {
+    "agent": "Codex",
+    "model": "gpt-6.2-astra",
+    "modelLabel": "GPT-6.2 Astra",
+    "effort": "high",
+    "file": "artifacts/gpt-6.2-astra-high-2026-11-18.html",
+    "generatedAt": "2026-11-18T00:56:19.646Z",
+    "prompt": "使用html + svg 实现 鹈鹕骑自行车\n",
+    "sha256": "d1acb74e780d7462ca5c8a8f04b2f89d9ba843bd01d3253a780858b00c01b650",
+    "effortSource": "generation-session"
+  },
+  {
+    "agent": "Codex",
+    "model": "gpt-6.2-astra",
+    "modelLabel": "GPT-6.2 Astra",
+    "effort": "xhigh",
+    "file": "artifacts/gpt-6.2-astra-xhigh-2026-11-18.html",
+    "generatedAt": "2026-11-18T01:02:39.758Z",
+    "prompt": "使用html + svg 实现 鹈鹕骑自行车\n",
+    "sha256": "ad9c6a44da345bbe7a80825e935167cf95db9f95306048c8f28ac19e99396206",
+    "effortSource": "generation-session"
   }
 ]
